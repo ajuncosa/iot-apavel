@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wil-app
+  namespace: dev
   labels:
     app: wil-app
 spec:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
         - name: wil-app
-          image: wil42/playground:v1
+          image: nginx:1.25
           ports:
             - containerPort: 80
